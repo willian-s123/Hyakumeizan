@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["willian-s123"]
   spec.email         = [""]
 
-  spec.summary       = ['hyakumeizan(仮)']
-  spec.description   = ['hyakumeizan(仮)']
+  spec.summary       = ['百名山の情報を簡単に取得できるようになるgem']
+  spec.description   = ['百名山の情報を簡単に取得できるようになるgem']
   spec.homepage      = "https://github.com/willian-s123/Hyakumeizan"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
