@@ -24,7 +24,7 @@ module Hyakumeizan
       private
 
       def dir
-        Dir["./lib/Hyakumeizan/data/*.yml"]
+        Dir["lib/Hyakumeizan/data/*.yml"]
       end
 
       def raise_no_mountain_data_error!(name)
