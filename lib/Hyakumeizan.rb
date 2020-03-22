@@ -1,6 +1,5 @@
 require "Hyakumeizan/version"
+require "Hyakumeizan/list"
 
 module Hyakumeizan
-  class Error < StandardError; end
-  # Your code goes here...
 end
