@@ -1,8 +1,8 @@
 # Hyakumeizan
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Hyakumeizan`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to Hyakumeizan gem!
 
-TODO: Delete this and the text above, and describe your gem
+This gem help to get easily Hyameizan mountains data!!
 
 ## Installation
 
@@ -22,7 +22,52 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Get all mountains data
+
+```ruby
+
+Hyakumeizan::List.all
+
+=> [...return all mountain data]
+
+```
+
+### Filter mountains data by prefecture
+
+```ruby
+
+Hyakumeizan::List.filter_by_prefecture('長野県')
+
+=> [...return only Nagano mountains data]
+```
+
+### Find target mountain by name
+
+```ruby
+
+Hyakumeizan::List.find_by_name_ja('蓼科山')
+
+=> {
+     name_ja: '蓼科山',
+     name_en: 'tateshinayama',
+     latitude: 36.103722222222224,
+     longtitude: 138.29494444444444,
+     height: '2530m',
+     prefecture: '長野県'
+   }
+
+
+Hyakumeizan::List.find_by_name_en('tateshinayama')
+
+=> {
+     name_ja: '蓼科山',
+     name_en: 'tateshinayama',
+     latitude: 36.103722222222224,
+     longtitude: 138.29494444444444,
+     height: '2530m',
+     prefecture: '長野県'
+   }
+```
 
 ## Development
 
@@ -32,8 +77,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/Hyakumeizan. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/Hyakumeizan/blob/master/CODE_OF_CONDUCT.md).
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/willian-s123/Hyakumeizan. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/willian-s123
+/Hyakumeizan/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
