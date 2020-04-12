@@ -6,7 +6,7 @@ module Hyakumeizan
 
     class << self
       def all
-        dir.map { |file| YAML.load_file(file) }
+        @mountains ||= Dir["#{__dir__}/data/*.yml"].map { |file| YAML.load_file(file) }
       end
 
       def filter_by_prefecture(prefecture)
@@ -22,10 +22,6 @@ module Hyakumeizan
       end
 
       private
-
-      def dir
-        Dir["./lib/Hyakumeizan/data/*.yml"]
-      end
 
       def raise_no_mountain_data_error!(name)
         raise NoMountainDataError.new("Can't find a #{name} in data. Please check your input name is correct name.")
